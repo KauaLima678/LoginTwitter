@@ -21,6 +21,7 @@
   --color-link: #4c4c4c;
   --color-transparent-black: #00000000;
   --title-color: #000000;
+  --hover-button: #c7c7c77a;
 }
 
 .dark{
@@ -118,6 +119,10 @@ body {
             border: 1px solid var(--color-black-50);
             color: var(--title-color);
 
+            &:hover{
+              background-color: var(--hover-button);
+            }
+
             svg {
               font-size: 20px;
             }
@@ -204,11 +209,19 @@ body {
             color: var(--secondary-color);
             border: 1px solid var(--color-black-50);
             width: 100%;
+
+            &:hover{
+              background-color: var(--hover-button);
+            }
           }
         }
       }
     }
   }
+}
+
+button{
+  cursor: pointer;
 }
 
 .rotate-animation {
