@@ -32,7 +32,8 @@
   --color-gray: gray;
   --color-link: #4c4c4c;
   --color-transparent-black: #00000000;
-  --title-color: rgb(255, 255, 255)
+  --title-color: rgb(255, 255, 255);
+  --hover-button: #c7c7c77a;
 }
 
 
@@ -80,7 +81,8 @@ body {
 
     .content {
       padding: 20px;
-      width: 70%;
+      width: 100%;
+      max-width: 480px;
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -237,5 +239,114 @@ button{
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media (max-width: 1060px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .sideImage {
+    display: none;
+  }
+
+  .contentLogin {
+    width: 100%;
+    padding: 0;
+
+    .content {
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+
+  .theme {
+    left: 20px;
+    top: 20px;
+  }
+
+  .form .buttons button,
+  .form .button2 button,
+  .form .final button {
+    width: 100%;
+  }
+
+  .form .line .line1,
+  .form .line .line2 {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentLogin .content .title {
+    font-size: 32px;
+  }
+
+  .form h2 {
+    font-size: 26px;
+  }
+
+  .form .final h1 {
+    font-size: 24px;
+  }
+
+  .form p {
+    font-size: 16px;
+  }
+
+  .form span {
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .theme{
+    font-size: 16px;
+    left: 90%;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .contentLogin .content {
+    padding: 10px;
+  }
+
+  .contentLogin{
+    padding: 30px !important;
+    width: 100%;
+  }
+
+  .theme button {
+    font-size: 24px;
+  }
+
+  .form .line {
+    gap: 10px;
+  }
+
+  .form .line .line1,
+  .form .line .line2 {
+    width: 25%;
+  }
+
+  .form .buttons button,
+  .form .button2 button,
+  .form .final button {
+    font-size: 14px;
+    padding: 20px 0;
+  }
+
+  .form .buttons button svg,
+  .form .button2 button svg {
+    font-size: 18px;
   }
 }
